@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Typing Game</title>
+  <script type="module" src="script.js"></script>
+  <script type="module" src="words.js"></script>
+  <script type="module" src="Game.js"></script>
+  <link href="styles.css" rel="stylesheet">
+</head>
+
+<body>
+  <div id="game-container">
+    <div id="info-container">
+      <div class="info-block" id="game-mode-difficulty">
+        <div class="info-cell" id="game-mode"></div>
+        <div class="info-cell" id="difficulty"></div>
+      </div>
+      <div class="info-block" id="message-current-word">
+        <div class="info-cell" id="difficulty-message"></div>
+        <div class="info-cell" id="current-word"></div>
+      </div>
+      <!-- Change styles to class enemy styles -->
+      <!-- New class for game stuff, remove from game area once game starts -->
+      <div class="info-block" id="lives-score">
+        <div class="info-cell" id="lives"></div>
+        <div class="info-cell" id="score"></div>
+      </div>
+    </div>
+    <div id="input-container">
+      <div id="game-area"></div>
+      <div id="buttons-container">
+        <button id="start" class="button start">Start</button>
+        <button id="mode" class="button mode">Mode: Normal</button>
+      </div>
+    </div>
+  </div>
+
+</body>
+
+</html>

@@ -1,0 +1,223 @@
+/* Pretty much all border stuff was only used during dev / debugging. */
+
+p {
+  font-size: 45px;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+body {
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  color: white;
+  align-items: center;
+  justify-content: center;
+  background-color: black;
+}
+
+#game-area {
+  width: 750px;
+  height: 400px;
+  display: flex;
+  color: inherit;
+  text-align: left;
+  overflow: hidden;
+  padding-top: 2px;
+  position: relative;
+  background-color: inherit;
+  border: thick solid gray;
+}
+
+#game-container {
+  padding: 2px;
+  display: flex;
+  flex-direction: column;
+  /* border: thick solid rgba(255, 0, 0, 0.232); */
+}
+
+#buttons-container {
+  margin: 4px 0;
+  /* border: 1px solid; */
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+#info-container {
+  display: flex;
+  text-align: center;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+#current-word {
+  font-size: 28px;
+  /* border: thick solid greenyellow;
+  border-width: 1px; */
+}
+
+.info-block {
+  height: 75px;
+  display: flex;
+  padding: 6px;
+  flex-direction: column;
+  justify-content: space-between;
+  /* border-width: 1px; */
+}
+
+.info-cell {
+  padding: 2px;
+  font-size: larger;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  justify-content: flex-end;
+  /* border-width: 1px; */
+}
+
+.start {
+  animation: breathe 1.5s infinite;
+}
+
+.button {
+  border: none;
+  color: white;
+  font-size: 45px;
+  cursor: pointer;
+  background: none;
+  animation: breathe 1.5s infinite;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.button.mode {
+  font-size: 34px;
+}
+
+.enemy {
+  margin: 10px;
+  position: absolute;
+  white-space: nowrap;
+  color: rgb(210, 203, 203);
+  animation: slideRight 10s linear infinite;
+}
+
+.targeted {
+  color: rgb(0%, 20%, 0%);
+}
+
+.cleared {
+  opacity: 0;
+  transition: opacity 2s ease-out;
+}
+
+.cleared.difficulty {
+  transition: opacity 5s ease-out;
+}
+
+.cleared.word {
+  color: rgb(0%, 100%, 0%);
+  text-shadow:
+    0 0 42px #0fa,
+    0 0 82px #0fa,
+    0 0 92px #0fa,
+    0 0 102px #0fa,
+    0 0 151px #0fa;
+  ;
+}
+
+.results-container {
+  /* border-width: 1px; */
+  text-align: center;
+  margin-inline: auto;
+}
+
+.result-stats {
+  transition: all .5s ease-out;
+  /* border-width: 1px; */
+  font-size: 28px;
+  color: white;
+  margin: 2px;
+}
+
+.result-button {
+  /* border: 1px solid white; */
+  flex-direction: row;
+  font-size: 28px;
+  color: white;
+  margin: 2px;
+}
+
+@keyframes slideRight {
+  0% {
+    left: -100%;
+  }
+
+  100% {
+    left: 100%;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(100%);
+  }
+
+  to {
+    transform: translateY(0);
+  }
+}
+
+@keyframes breathe {
+  0% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: .2;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+/*
+#game-mode-difficulty {
+  border: thick solid blue;
+  border-width: 1px;
+}
+*/
+
+/* 
+#game-mode {
+  border: thick solid cyan;
+  border-width: 1px;
+} */
+
+/* #difficulty {
+  border: thick solid blueviolet;
+  border-width: 1px;
+} */
+
+/* #message-current-word {
+  border: thick solid green;
+  border-width: 1px;
+} */
+
+/* #difficulty-message {
+  border: thick solid lightgreen;
+  border-width: 1px;
+} */
+
+/* #lives-score {
+  border: thick solid yellow;
+  border-width: 1px;
+} */
+
+/* #lives {
+  border: thick solid rgb(238, 238, 152);
+  border-width: 1px;
+} */
+
+/* #score {
+  border: thick solid rgb(161, 161, 1);
+  border-width: 1px;
+} */
